@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".police_interface"
+    tools:showIn="@layout/activity_police_interface"
+    android:background="#3c3e52">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="107dp"
+                android:layout_height="97dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="auto"
+                android:visibility="visible">
+
+
+                <RelativeLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:text="Vehicle Details"
+                        android:textColor="#FF63d5ca"
+                        android:textSize="25sp" />
+
+                    <Button
+                        android:id="@+id/logout_button"
+                        android:layout_width="80dp"
+                        android:layout_height="38dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_toEndOf="@id/heading"
+                        android:background="@drawable/logout_button"
+                        android:text="Logout"
+                        android:textColor="@android:color/white" />
+                </RelativeLayout>
+
+                <TableRow
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Registration No."
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/plate_number"
+                        android:layout_width="167dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/textView4"
+                        android:layout_alignEnd="@+id/papers"
+                        android:backgroundTint="#FF63d5ca"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:textColor="@android:color/darker_gray" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Drop Location"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/drop"
+                        android:layout_width="166dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/textView7"
+                        android:layout_alignStart="@+id/editText"
+                        android:backgroundTint="#FF63d5ca"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:textColor="@android:color/darker_gray" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp">
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignTop="@+id/typetxt"
+                        android:ems="10"
+                        android:soundEffectsEnabled="true"
+                        android:visibility="visible"></android.support.v7.widget.AppCompatSpinner>
+
+
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignTop="@+id/typetxt"
+                        android:ems="10"></android.support.v7.widget.AppCompatSpinner>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:id="@+id/typetxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vehicle Type"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/myspinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/typetxt"
+                        android:ems="10"></android.support.v7.widget.AppCompatSpinner>
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:id="@+id/txtFine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fine"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/fine"
+                        android:layout_width="82dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/txtFine"
+                        android:backgroundTint="#FF63d5ca"
+                        android:ems="10"
+                        android:inputType="none"
+                        android:textColor="@android:color/darker_gray" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Documents Required"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp">
+
+                    <CheckBox
+                        android:id="@+id/liscense"
+                        android:layout_width="152dp"
+                        android:layout_height="wrap_content"
+                        android:text="Driving Liscense"
+                        android:textColor="@android:color/white" />
+
+                    <CheckBox
+                        android:id="@+id/papers"
+                        android:layout_width="173dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/textView10"
+                        android:text="Vehicle Papers"
+                        android:textColor="@android:color/white" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="30dp">
+
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginLeft="50dp"
+                        android:background="@drawable/round_buttons"
+                        android:text="Submit" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
